@@ -69,6 +69,27 @@
 			}
 		}); //end ajax	
 	}
+	
+	function add_wishlist(goods_id) {
+	    $.ajax({
+	        type: "post",
+	        async: false,
+	        url: "${contextPath}/wishlist/addGoodsToWishlist.do",
+	        data: {
+	            goods_id: goods_id
+	        },
+	        success: function(data, textStatus) {
+	            if (data.trim() == 'add_success') {
+	                alert("위시리스트에 추가되었습니다.");
+	            } else if (data.trim() == 'already_existed') {
+	                alert("이미 위시리스트에 등록된 상품입니다.");
+	            }
+	        },
+	        error: function(data, textStatus) {
+	            alert("에러가 발생했습니다." + data);
+	        }
+	    });
+	}
 
 	function imagePopup(type) {
 		if (type == 'open') {
@@ -214,7 +235,7 @@ function fn_order_each_goods(goods_id,goods_title,goods_sales_price,fileName){
 			<li><a class="buy" href="javascript:fn_order_each_goods('${goods.goods_id }','${goods.goods_title }','${goods.goods_sales_price}','${goods.goods_fileName}');">구매하기 </a></li>
 			<li><a class="cart" href="javascript:add_cart('${goods.goods_id }')">장바구니</a></li>
 			
-			<li><a class="wish" href="#">위시리스트</a></li>
+			<li><a class="wish" href="javascript:add_wishlist('${goods.goods_id }')">위시리스트</a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>
