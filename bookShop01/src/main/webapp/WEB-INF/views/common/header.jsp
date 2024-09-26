@@ -101,6 +101,7 @@
 			<input name="searchWord" class="main_input" type="text" onKeyUp="keywordSearch()"> 
 			<input type="submit" name="search" class="btn1" value="검 색">
 		</form>
+		<a href="http://www.aladin.co.kr/search/wsearch.aspx?SearchTarget=Book" class="detail_search_go">상세검색</a>
 	</div>
    <div id="suggest">
         <div id="suggestList"></div>
