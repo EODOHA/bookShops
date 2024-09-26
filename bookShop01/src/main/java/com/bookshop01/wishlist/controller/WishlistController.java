@@ -13,3 +13,4 @@ public interface WishlistController {
 	public ModelAndView removeGoodsFromWishlist(@RequestParam("wishlist_id") String wishlist_id,
 			HttpServletRequest request, HttpServletResponse response) throws Exception;
 }
+
