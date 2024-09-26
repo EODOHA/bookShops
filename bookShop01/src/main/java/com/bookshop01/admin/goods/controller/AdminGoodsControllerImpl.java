@@ -43,7 +43,16 @@ public class AdminGoodsControllerImpl extends BaseController  implements AdminGo
 		ModelAndView mav = new ModelAndView(viewName);
 		HttpSession session=request.getSession();
 		session=request.getSession();
+//		
+//		//관리자 게시판 쓰기 권한을 위하여 관리자 정보를 세션에 저장
+//		MemberVO memberVO = (MemberVO) session.getAttribute("memberinfo");
+//	    if (memberVO != null) {
+//	        String memberId = memberVO.getMember_id(); // 관리자 아이디 가져오기
+//	        mav.addObject("memberId", memberId); // 모델에 추가
+//	    }
+
 		session.setAttribute("side_menu", "admin_mode"); // 테스트 브랜치 변경사항
+		
 		
 		String fixedSearchPeriod = dateMap.get("fixedSearchPeriod");
 		String section = dateMap.get("section");
