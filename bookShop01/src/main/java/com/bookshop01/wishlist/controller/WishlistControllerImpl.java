@@ -24,7 +24,7 @@ public class WishlistControllerImpl implements WishlistController {
 
     @Autowired
     private WishlistService wishlistService;
-
+  
     @Autowired
     private WishlistVO wishlistVO;
 
