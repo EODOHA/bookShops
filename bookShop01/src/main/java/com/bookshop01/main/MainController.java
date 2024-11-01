@@ -36,5 +36,7 @@ public class MainController extends BaseController {
 		Map<String,List<GoodsVO>> goodsMap=goodsService.listGoods();
 		mav.addObject("goodsMap", goodsMap);
 		return mav;
+		
+		//1234
 	}
 }
