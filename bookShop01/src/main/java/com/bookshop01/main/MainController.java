@@ -37,6 +37,6 @@ public class MainController extends BaseController {
 		mav.addObject("goodsMap", goodsMap);
 		return mav;
 		
-		//1234
+		//123456
 	}
 }
